@@ -1,0 +1,19 @@
+<p>
+  converses works!
+</p>
+  <a *ngFor="let conversaUser of conversesUser; let i = index">
+
+<a *ngIf="nomUserID[i] == userNom">
+	  <p>Per {{nomUserID[i]}}</p>
+
+</a>
+<a *ngIf="nomUserID[i] != userNom">
+	  <p>De {{nomUserID[i]}}</p>
+
+</a>
+    <a>{{conversaUser.message}}</a>
+    <hr>
+
+  </a>
+
+

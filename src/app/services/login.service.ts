@@ -33,6 +33,17 @@ getConversesUser(userID){
   return this.http.get(this.url+'getAllResumeChats/'+userID,{headers: headers}).map(res => res.json());
 }
 
+getConversa(senderID, receiverID){
+  let headers = new Headers({'Content-Type':'application/json'});
+  return this.http.get(this.url+'getChat/'+senderID+'/'+receiverID,{headers: headers}).map(res => res.json());
+}
+
+enviarMissatge(sender, receiver, message){
+  let params = {sender: sender, receiver: receiver, message: message};
+  let headers = new Headers({'Content-Type':'application/json'});
+  return this.http.post(this.url+'sendMessage',params,{headers: headers})
+  .map(res => res.json());
+}
 
 
 }

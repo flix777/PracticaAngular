@@ -1,5 +1,14 @@
-<h2>Converses</h2>
+<h2>Conversa {{userRNom}}</h2>
+<div class="divChat">
+<a *ngFor="let missatge of missatges; let i = $index" [attr.name]="i">
+<div *ngIf="missatge.sender == userID" class="enviar text-right">
+      <p>{{missatge.message}}</p>
 
-<p>
+</div>
+<div *ngIf="missatge.sender != userID" class="rebre">
+      <p>{{missatge.message}}</p>
 
-</p>
+</div>
+</a>
+</div>
+	<input id="missatge" type="text" placeholder="Missatge...">

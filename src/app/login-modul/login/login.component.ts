@@ -66,7 +66,9 @@ this.serveiLogin.getUserID(user).subscribe(
 );
 */
     //
-    }
+  }else{
+  $("#loginNoValid").html("Incorrecta");
+}
   }
 
      }
